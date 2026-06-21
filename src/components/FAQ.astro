@@ -1,59 +1,61 @@
 ---
 const faqs = [
   {
-    q: 'Funciona FULLPOS sin internet?',
-    a: 'Sí. FULLPOS está diseñado para funcionar completamente sin conexión a internet. Todos los datos se almacenan localmente en tu computadora, lo que garantiza que puedas vender en todo momento, incluso si falla tu conexión.',
+    q: '¿FullPOS funciona sin internet?',
+    a: 'Sí, FullPOS funciona completamente sin conexión a internet. Todas las ventas, inventario y operaciones se procesan localmente en tu computadora. La única función que requiere internet es la app FullPOS Owner para consultar reportes desde tu celular.',
   },
   {
-    q: 'Puedo ver reportes en mi celular?',
-    a: 'Sí. Con FullPOS Owner, nuestra aplicación web móvil, puedes acceder a reportes de ventas, inventario, estadísticas y más desde cualquier lugar usando tu teléfono o tablet.',
+    q: '¿Puedo ver reportes en mi celular?',
+    a: 'Sí, con FullPOS Owner puedes acceder a reportes de ventas, inventario y estadísticas desde cualquier lugar usando tu celular. Solo necesitas conexión a internet en tu celular y que tu computadora con FullPOS esté conectada a la misma red.',
   },
   {
-    q: 'Cuánto dura la demo?',
-    a: 'La demo de FULLPOS dura 5 días hábiles y es completamente funcional. Durante este período podrás probar todas las características del sistema sin ninguna limitación.',
+    q: '¿Cuánto dura la demo?',
+    a: 'La demo de FullPOS dura 5 días completamente gratis. Durante este periodo puedes probar todas las funciones del sistema sin limitaciones. Al finalizar, puedes adquirir tu licencia para continuar usando el sistema.',
   },
   {
-    q: 'Puedo usar lectores de código de barras?',
-    a: 'Sí. FULLPOS es compatible con cualquier lector de código de barras USB. Simplemente conecta el lector a tu computadora y empieza a escanear productos al instante.',
+    q: '¿Puedo usar lectores de código de barras?',
+    a: 'Sí, FullPOS es compatible con lectores de código de barras USB. Simplemente conecta el lector a tu computadora y FullPOS lo reconocerá automáticamente. Puedes buscar productos escaneando su código de barras.',
   },
   {
-    q: 'Puedo usar impresoras térmicas?',
-    a: 'Sí. FULLPOS soporta impresoras térmicas ESC/POS y también impresoras matriciales. Puedes imprimir tickets de venta, facturas y reportes.',
+    q: '¿Puedo usar impresoras térmicas?',
+    a: 'Sí, FullPOS es compatible con impresoras térmicas ESC/POS y también con impresoras matriciales. Puedes imprimir tickets de venta, facturas y reportes directamente desde el sistema.',
   },
   {
-    q: 'Ofrecen soporte de instalación?',
-    a: 'Sí. Ofrecemos soporte profesional de instalación y configuración. Te ayudamos a instalar FULLPOS, configurar tu negocio, importar tus datos y capacitar a tu equipo.',
+    q: '¿Ofrecen soporte de instalación?',
+    a: 'Sí, ofrecemos soporte completo de instalación. Te guiamos paso a paso en la configuración inicial, creación de tu negocio y carga de productos. También ofrecemos soporte continuo vía WhatsApp.',
   },
   {
-    q: 'Puedo migrar mi información?',
-    a: 'Sí. Podemos ayudarte a migrar tus datos desde otros sistemas o desde Excel. Te guiamos en el proceso para que no pierdas información importante de tu negocio.',
+    q: '¿Puedo migrar mi información?',
+    a: 'Sí, podemos ayudarte a migrar tus datos desde otros sistemas. Contáctanos y te indicaremos el proceso para transferir tus productos, clientes y otra información importante.',
   },
   {
-    q: 'Cómo se manejan las licencias?',
-    a: 'Las licencias de FULLPOS son mensuales con un mínimo de 3 meses. Cada licencia incluye actualizaciones y soporte técnico. Puedes renovar fácilmente tu licencia cada mes.',
+    q: '¿Cómo se manejan las licencias?',
+    a: 'Las licencias de FullPOS se adquieren por tiempo (mínimo 3 meses). Al comprar tu licencia, recibes un código de activación que ingresas en el sistema. Cuando la licencia vence, simplemente la renuevas y continúas trabajando.',
   },
 ];
 ---
 
-<section id="faq" class="bg-gray-50 py-16 sm:py-20 lg:py-28">
+<section id="faq" class="bg-white py-16 sm:py-20 lg:py-28">
   <div class="container-custom">
     <div class="text-center">
       <span class="badge">FAQ</span>
       <h2 class="section-title mt-4">Preguntas Frecuentes</h2>
       <p class="section-subtitle">
-        Resolvemos tus dudas sobre FULLPOS. Si tienes más preguntas, no dudes en contactarnos.
+        Respuestas a las preguntas más comunes sobre FullPOS.
       </p>
     </div>
 
-    <div class="mx-auto mt-8 max-w-3xl sm:mt-12">
+    <div class="mx-auto mt-10 max-w-3xl sm:mt-12">
       {faqs.map((faq, index) => (
-        <details class="group border-b border-gray-200 last:border-b-0">
+        <details class="group border-b border-gray-100 last:border-b-0">
           <summary class="flex cursor-pointer items-center justify-between py-4 text-sm font-semibold text-gray-900 transition-colors hover:text-primary sm:py-5 sm:text-base">
-            <span>{faq.q}</span>
-            <svg class="h-4 w-4 flex-shrink-0 text-gray-400 transition-transform duration-300 group-open:rotate-45 sm:h-5 sm:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+            {faq.q}
+            <svg class="h-4 w-4 flex-shrink-0 text-gray-400 transition-transform duration-300 group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
           </summary>
-          <div class="pb-4 text-sm leading-relaxed text-gray-500 sm:pb-5 sm:text-base">
-            {faq.a}
+          <div class="pb-4 sm:pb-5">
+            <p class="text-sm leading-relaxed text-gray-500 sm:text-base">{faq.a}</p>
           </div>
         </details>
       ))}

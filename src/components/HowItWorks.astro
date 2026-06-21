@@ -3,81 +3,104 @@ const steps = [
   {
     number: '1',
     title: 'Descarga la Demo',
-    description: 'Descarga FullPOS completamente gratis. La demo incluye todas las funciones del sistema sin limitaciones.',
+    description: 'Descarga el instalador desde nuestro sitio web.',
     icon: 'download',
   },
   {
     number: '2',
     title: 'Instala FullPOS',
-    description: 'Instala el programa en tu computadora con Windows. El proceso es rápido y sencillo, solo sigue los pasos.',
+    description: 'Ejecuta el instalador en tu computadora Windows.',
     icon: 'monitor',
   },
   {
     number: '3',
-    title: 'Usa el Sistema 5 Días',
-    description: 'Prueba FullPOS sin compromiso durante 5 días. Configura tu negocio, crea productos y procesa ventas reales.',
-    icon: 'calendar',
+    title: 'Crea tu Negocio',
+    description: 'Configura tu empresa, productos y precios.',
+    icon: 'building',
   },
   {
     number: '4',
-    title: 'Compra tu Licencia',
-    description: 'Si FullPOS es lo que necesitas, adquiere tu licencia desde $20 USD al mes. Mínimo 3 meses. Puedes comprar 3, 6, 9, 12 meses o más.',
-    icon: 'credit-card',
+    title: 'Activa tu Licencia',
+    description: 'Adquiere tu licencia y actívala al instante.',
+    icon: 'key',
   },
   {
     number: '5',
-    title: 'Activa y Vende',
-    description: 'Activa tu licencia y continúa usando FullPOS sin interrupciones. Todos tus datos de la demo se conservan.',
+    title: 'Empieza a Vender',
+    description: 'Comienza a procesar ventas y controlar tu negocio.',
     icon: 'check-circle',
   },
 ];
 ---
 
-<section id="como-funciona" class="py-16 sm:py-20 lg:py-28">
+<section id="como-empezar" class="bg-white py-16 sm:py-20 lg:py-28">
   <div class="container-custom">
     <div class="text-center">
-      <span class="badge">Cómo Funciona</span>
-      <h2 class="section-title mt-4">Comienza en 5 Pasos</h2>
+      <span class="badge">Cómo empezar</span>
+      <h2 class="section-title mt-4">Cómo empezar</h2>
       <p class="section-subtitle">
-        Empezar con FullPOS es más fácil de lo que imaginas. En pocos minutos tendrás tu sistema funcionando.
+        En solo unos pasos tendrás FullPOS funcionando en tu negocio.
       </p>
     </div>
 
     <div class="relative mt-12 sm:mt-16">
-      <!-- Timeline line (desktop only) -->
-      <div class="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-gray-200 lg:block" />
+      <!-- Desktop Timeline Line -->
+      <div class="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-primary/30 via-primary/20 to-transparent lg:block" />
 
-      <div class="space-y-6 sm:space-y-8 lg:space-y-0">
+      <div class="space-y-8 sm:space-y-12 lg:space-y-0">
         {steps.map((step, index) => (
-          <div class={`relative flex flex-col gap-4 lg:flex-row ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'}`}>
-            <!-- Timeline dot (desktop) -->
-            <div class="absolute left-1/2 top-8 z-10 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-primary bg-white lg:block" />
-
-            <!-- Mobile timeline line -->
-            <div class="absolute left-6 top-0 h-full w-0.5 bg-gray-200 lg:hidden" />
-
+          <div class={`relative flex flex-col items-center lg:flex-row ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} lg:items-start lg:gap-8`}>
             <!-- Content -->
-            <div class="flex-1 lg:px-12">
-              <div class="relative rounded-2xl bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-8 lg:text-left">
-                <div class="flex items-start gap-4">
-                  <!-- Mobile step number -->
-                  <div class="relative z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-primary text-white text-sm font-bold lg:hidden">
-                    {step.number}
+            <div class={`w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
+              <div class={`rounded-2xl bg-white p-5 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-6 ${index % 2 === 0 ? 'lg:mr-8' : 'lg:ml-8'}`}>
+                <div class={`mb-3 flex items-center gap-3 ${index % 2 === 0 ? 'lg:flex-row-reverse lg:justify-start' : ''}`}>
+                  <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary sm:h-12 sm:w-12">
+                    {step.icon === 'download' && (
+                      <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                    )}
+                    {step.icon === 'monitor' && (
+                      <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    )}
+                    {step.icon === 'building' && (
+                      <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    )}
+                    {step.icon === 'key' && (
+                      <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" /></svg>
+                    )}
+                    {step.icon === 'check-circle' && (
+                      <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    )}
                   </div>
-                  <!-- Desktop step number -->
-                  <div class={`hidden lg:flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-primary text-white text-xl font-bold ${index % 2 === 0 ? '' : 'lg:order-1'}`}>
-                    {step.number}
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <h3 class="text-base font-bold text-gray-900 sm:text-xl">{step.title}</h3>
-                    <p class="mt-1.5 text-sm leading-relaxed text-gray-500 sm:mt-2 sm:text-base">{step.description}</p>
-                  </div>
+                  <h3 class="text-base font-bold text-gray-900 sm:text-lg">{step.title}</h3>
                 </div>
+                <p class="text-sm leading-relaxed text-gray-500 sm:text-base">{step.description}</p>
               </div>
             </div>
 
-            <!-- Spacer for alternating layout (desktop) -->
-            <div class="hidden flex-1 lg:block" />
+            <!-- Timeline Node (Desktop) -->
+            <div class="relative z-10 hidden lg:flex lg:h-12 lg:w-12 lg:flex-shrink-0 lg:items-center lg:justify-center">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-lg shadow-primary/25">
+                {step.number}
+              </div>
+            </div>
+
+            <!-- Empty space for the other side -->
+            <div class="hidden w-1/2 lg:block" />
+          </div>
+        ))}
+      </div>
+
+      <!-- Mobile Timeline -->
+      <div class="mt-8 space-y-6 lg:hidden">
+        {steps.map((step) => (
+          <div class="flex items-start gap-4">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-md">
+              {step.number}
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900">{step.title}</h3>
+              <p class="mt-1 text-sm text-gray-500">{step.description}</p>
+            </div>
           </div>
         ))}
       </div>

@@ -1,43 +1,51 @@
 ---
 ---
 
-<section id="demo" class="relative overflow-hidden py-16 sm:py-20 lg:py-28">
-  <!-- Background -->
-  <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-dark to-accent-dark" />
-  <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
+<section class="relative overflow-hidden bg-dark py-16 sm:py-20 lg:py-28">
+  <div class="absolute inset-0 bg-dark" />
+  <div class="absolute top-[-10%] left-[-5%] h-[500px] w-[500px] rounded-full bg-primary/20 blur-[120px] animate-pulse-glow" />
+  <div class="absolute bottom-[-10%] right-[-5%] h-[600px] w-[600px] rounded-full bg-accent/15 blur-[120px] animate-pulse-glow" style="animation-delay: 1.5s" />
+  <div class="absolute top-[40%] left-[50%] h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-[100px]" />
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 60px 60px;" />
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
 
-  <div class="container-custom relative">
-    <div class="text-center">
-      <h2 class="text-2xl font-extrabold text-white sm:text-3xl sm:leading-tight lg:text-5xl">
-        ¿Listo para Modernizar tu Negocio?
-      </h2>
-      <p class="mx-auto mt-4 max-w-2xl text-sm text-white/80 sm:mt-6 sm:text-base lg:text-lg">
-        Empieza a usar FullPOS hoy y toma el control de tu negocio. Descarga la demo gratis y descubre por qué tantos negocios confían en nosotros.
+  <div class="container-custom relative z-10">
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="badge">Comienza ahora</span>
+      <h2 class="section-title mt-4 text-white">¿Listo para modernizar tu negocio?</h2>
+      <p class="mt-4 text-lg leading-relaxed text-gray-400">
+        Empieza a usar FullPOS hoy y toma el control de tu negocio.
       </p>
 
-      <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row sm:gap-4">
-        <a href="#contacto" class="btn-white w-full sm:w-auto px-6 py-3.5 text-sm font-bold shadow-xl sm:px-10 sm:py-4 sm:text-base">
-          <svg class="mr-2 h-4 w-4 sm:h-5 sm:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-          Descargar Demo Gratis
-        </a>
-        <a href="#precios" class="inline-flex w-full sm:w-auto items-center justify-center rounded-xl border-2 border-white/30 px-6 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:bg-white/10 sm:px-10 sm:py-4 sm:text-base">
+      <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <button class="download-btn btn-white text-base" data-original-text="Descargar Demo Gratis">
+          <svg class="download-icon mr-2 h-5 w-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+          <span class="download-text">Descargar Demo Gratis</span>
+        </button>
+        <a href="#precios" class="btn-secondary border-white/20 text-white hover:border-primary hover:text-white">
+          <svg class="mr-2 h-5 w-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" /></svg>
           Comprar Licencia
         </a>
       </div>
 
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-white/60 sm:mt-8 sm:gap-8 sm:text-sm">
-        <span class="flex items-center gap-1.5 sm:gap-2">
-          <svg class="h-3 w-3 text-green-300 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+      <p class="mt-3 text-xs text-gray-500 sm:text-sm">
+        Siempre descargarás la versión más reciente de FullPOS.
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-6">
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <svg class="h-4 w-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
           Demo 5 días gratis
-        </span>
-        <span class="flex items-center gap-1.5 sm:gap-2">
-          <svg class="h-3 w-3 text-green-300 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <svg class="h-4 w-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
           Sin compromiso
-        </span>
-        <span class="flex items-center gap-1.5 sm:gap-2">
-          <svg class="h-3 w-3 text-green-300 sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <svg class="h-4 w-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
           Soporte incluido
-        </span>
+        </div>
       </div>
     </div>
   </div>

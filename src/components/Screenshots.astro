@@ -1,58 +1,124 @@
 ---
-const screenshots = [
-  { title: 'Configuración de FullPOS', desc: 'Configura tu negocio y personaliza el sistema', file: '01_configuracion_fullpos.png' },
-  { title: 'FullPOS Owner - Nube', desc: 'Accede a tus datos desde la nube', file: '02_nube_fullpos_owner.png' },
-  { title: 'Registrar Compra', desc: 'Gestiona tus compras y proveedores', file: '03_registrar_compra_manual.png' },
-  { title: 'Movimientos de Inventario', desc: 'Controla las entradas y salidas de productos', file: '04_movimientos_inventario.png' },
-  { title: 'Menú Lateral', desc: 'Navega por todas las funciones del sistema', file: '05_menu_lateral_fullpos.png' },
-  { title: 'Menú Lateral - Más Opciones', desc: 'Accede a configuraciones avanzadas', file: '06_menu_lateral_fullpos_2.png' },
-  { title: 'Categorías de Productos', desc: 'Organiza tus productos por categorías', file: '07_categorias_productos.png' },
-  { title: 'Ventas - Catálogo', desc: 'Realiza ventas desde el catálogo de productos', file: '08_ventas_catalogo.png' },
-  { title: 'Factura de Venta', desc: 'Genera facturas profesionales', file: '09_factura_de_venta.png' },
+const cards = [
+  {
+    title: 'Pantalla de Ventas',
+    desc: 'Interfaz rápida e intuitiva para registrar ventas al instante.',
+    gradient: 'from-blue-600 to-blue-400',
+    icon: 'cart',
+  },
+  {
+    title: 'Catálogo de Productos',
+    desc: 'Gestiona tu catálogo con imágenes, precios y categorías.',
+    gradient: 'from-emerald-600 to-emerald-400',
+    icon: 'package',
+  },
+  {
+    title: 'Control de Inventario',
+    desc: 'Lleva el control exacto de entradas y salidas de tu stock.',
+    gradient: 'from-violet-600 to-violet-400',
+    icon: 'inventory',
+  },
+  {
+    title: 'Reportes y Estadísticas',
+    desc: 'Visualiza el rendimiento de tu negocio con gráficos claros.',
+    gradient: 'from-amber-600 to-amber-400',
+    icon: 'chart',
+  },
+  {
+    title: 'Gestión de Compras',
+    desc: 'Administra órdenes de compra y proveedores eficientemente.',
+    gradient: 'from-rose-600 to-rose-400',
+    icon: 'purchase',
+  },
+  {
+    title: 'Administración de Clientes',
+    desc: 'Mantén un historial completo de tus clientes y sus compras.',
+    gradient: 'from-cyan-600 to-cyan-400',
+    icon: 'users',
+  },
+  {
+    title: 'Configuración del Sistema',
+    desc: 'Personaliza FullPOS según las necesidades de tu negocio.',
+    gradient: 'from-orange-600 to-orange-400',
+    icon: 'settings',
+  },
+  {
+    title: 'FullPOS Owner',
+    desc: 'Accede a reportes desde tu celular con nuestra app web.',
+    gradient: 'from-purple-600 to-pink-500',
+    icon: 'mobile',
+  },
 ];
 ---
 
-<section id="modulos" class="bg-gray-50 py-16 sm:py-20 lg:py-28">
+<section id="capturas" class="bg-dark py-16 sm:py-20 lg:py-28">
   <div class="container-custom">
     <div class="text-center">
       <span class="badge">Galería</span>
-      <h2 class="section-title mt-4">Capturas de Pantalla</h2>
-      <p class="section-subtitle">
-        Conoce la interfaz de FullPOS diseñada para la eficiencia y facilidad de uso.
+      <h2 class="section-title mt-4 text-white">Conoce FullPOS</h2>
+      <p class="section-subtitle text-gray-400">
+        Una interfaz limpia y profesional diseñada para que trabajes más rápido.
       </p>
     </div>
 
-    <div class="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-      {screenshots.map((ss) => (
-        <div class="group relative overflow-hidden rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl sm:rounded-2xl">
-          <div class="p-2 sm:p-3">
-            <div class="overflow-hidden rounded-lg border border-gray-200 sm:rounded-t-lg">
-              <!-- Screen top bar -->
-              <div class="flex items-center gap-1 bg-gray-100 px-2 py-1.5 sm:gap-1.5 sm:px-3 sm:py-2">
-                <div class="h-1.5 w-1.5 rounded-full bg-red-400 sm:h-2 sm:w-2" />
-                <div class="h-1.5 w-1.5 rounded-full bg-yellow-400 sm:h-2 sm:w-2" />
-                <div class="h-1.5 w-1.5 rounded-full bg-green-400 sm:h-2 sm:w-2" />
-                <div class="ml-1.5 text-[8px] text-gray-400 sm:ml-2 sm:text-[10px]">FullPOS</div>
-              </div>
-              <!-- Screen content -->
-              <div class="bg-gray-50">
-                <img
-                  src={`/images/capturas/${ss.file}`}
-                  alt={ss.title}
-                  class="w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+    <!-- Main Screenshot -->
+    <div class="mt-10 sm:mt-12">
+      <div class="mx-auto max-w-4xl overflow-hidden rounded-2xl bg-dark-3 shadow-2xl ring-1 ring-white/10">
+        <div class="flex items-center gap-2 border-b border-white/10 px-4 py-3">
+          <div class="h-3 w-3 rounded-full bg-red-500" />
+          <div class="h-3 w-3 rounded-full bg-yellow-500" />
+          <div class="h-3 w-3 rounded-full bg-green-500" />
+          <span class="ml-3 text-xs text-gray-500">FullPOS - Pantalla de Ventas</span>
+        </div>
+        <div class="relative">
+          <img
+            src="/images/imagenprincipal.png"
+            alt="FullPOS Pantalla de Ventas"
+            class="w-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 flex items-center justify-center bg-dark/60 opacity-0 transition-opacity duration-300 hover:opacity-100">
+            <span class="rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">Ver pantalla completa</span>
           </div>
-          <!-- Laptop base -->
-          <div class="mx-auto h-0.5 w-3/4 rounded-b bg-gray-300 sm:h-1" />
-          <!-- Overlay on hover -->
-          <div class="absolute inset-0 flex items-center justify-center bg-primary/90 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <div class="p-3 text-center text-white sm:p-4">
-              <h3 class="text-sm font-bold sm:text-lg">{ss.title}</h3>
-              <p class="mt-0.5 text-xs text-white/80 sm:mt-1 sm:text-sm">{ss.desc}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screenshot Cards Grid -->
+    <div class="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+      {cards.map((card) => (
+        <div class="group relative overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl">
+          <div class={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-90`} />
+          <div class="absolute inset-0 bg-dark/40 transition-opacity duration-300 group-hover:opacity-0" />
+          <div class="relative p-5 sm:p-6">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm sm:h-12 sm:w-12">
+              {card.icon === 'cart' && (
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" /></svg>
+              )}
+              {card.icon === 'package' && (
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+              )}
+              {card.icon === 'inventory' && (
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+              )}
+              {card.icon === 'chart' && (
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+              )}
+              {card.icon === 'purchase' && (
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+              )}
+              {card.icon === 'users' && (
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" /></svg>
+              )}
+              {card.icon === 'settings' && (
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              )}
+              {card.icon === 'mobile' && (
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+              )}
             </div>
+            <h3 class="text-base font-bold text-white sm:text-lg">{card.title}</h3>
+            <p class="mt-1 text-sm text-white/70">{card.desc}</p>
           </div>
         </div>
       ))}

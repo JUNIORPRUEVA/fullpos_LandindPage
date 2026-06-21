@@ -1,165 +1,201 @@
 ---
 ---
 
-<section class="py-16 sm:py-20 lg:py-28">
+<section class="bg-white py-16 sm:py-20 lg:py-28">
   <div class="container-custom">
-    <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+    <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
       <!-- Left: Phone Mockup -->
       <div class="flex justify-center lg:justify-start">
         <div class="relative">
-          <!-- Phone frame -->
-          <div class="relative mx-auto w-56 animate-float sm:w-64 lg:w-72">
-            <div class="rounded-[2rem] border-4 border-gray-800 bg-white shadow-2xl sm:rounded-[2.5rem]">
-              <!-- Notch -->
-              <div class="flex items-center justify-center pt-2 sm:pt-3">
-                <div class="h-1.5 w-16 rounded-full bg-gray-800 sm:h-2 sm:w-20" />
-              </div>
-              <!-- Screen -->
-              <div class="p-3 sm:p-4">
-                <div class="rounded-xl bg-gradient-to-b from-primary/5 to-accent/5 p-3 sm:rounded-2xl sm:p-4">
-                  <!-- Header -->
-                  <div class="mb-3 flex items-center justify-between sm:mb-4">
-                    <div>
-                      <div class="text-[10px] font-semibold text-gray-400 sm:text-xs">FullPOS Owner</div>
-                      <div class="text-xs font-bold text-gray-900 sm:text-sm">Dashboard</div>
-                    </div>
-                    <div class="flex gap-1">
-                      <div class="h-1.5 w-1.5 rounded-full bg-green-400 sm:h-2 sm:w-2" />
-                      <div class="h-1.5 w-1.5 rounded-full bg-green-400 sm:h-2 sm:w-2" />
-                    </div>
-                  </div>
-                  <!-- Stats Cards -->
-                  <div class="space-y-2 sm:space-y-3">
-                    <div class="rounded-lg bg-white p-2 shadow-sm sm:rounded-xl sm:p-3">
-                      <div class="flex items-center justify-between">
-                        <span class="text-[10px] text-gray-400 sm:text-xs">Ventas Hoy</span>
-                        <span class="text-[10px] font-bold text-green-500 sm:text-xs">+12%</span>
-                      </div>
-                      <div class="mt-0.5 text-sm font-bold text-gray-900 sm:mt-1 sm:text-lg">RD$ 1,284</div>
-                    </div>
-                    <div class="rounded-lg bg-white p-2 shadow-sm sm:rounded-xl sm:p-3">
-                      <div class="flex items-center justify-between">
-                        <span class="text-[10px] text-gray-400 sm:text-xs">Ganancias</span>
-                        <span class="text-[10px] font-bold text-green-500 sm:text-xs">+8%</span>
-                      </div>
-                      <div class="mt-0.5 text-sm font-bold text-gray-900 sm:mt-1 sm:text-lg">RD$ 450</div>
-                    </div>
-                    <div class="rounded-lg bg-white p-2 shadow-sm sm:rounded-xl sm:p-3">
-                      <div class="flex items-center justify-between">
-                        <span class="text-[10px] text-gray-400 sm:text-xs">Productos</span>
-                        <span class="text-[10px] text-gray-400 sm:text-xs">1,247</span>
-                      </div>
-                      <div class="mt-0.5 text-sm font-bold text-gray-900 sm:mt-1 sm:text-lg">2,156</div>
-                    </div>
-                    <div class="rounded-lg bg-white p-2 shadow-sm sm:rounded-xl sm:p-3">
-                      <div class="flex items-center justify-between">
-                        <span class="text-[10px] text-gray-400 sm:text-xs">Stock Bajo</span>
-                        <span class="text-[10px] font-bold text-red-500 sm:text-xs">23</span>
-                      </div>
-                      <div class="mt-0.5 text-sm font-bold text-gray-900 sm:mt-1 sm:text-lg">Alertas</div>
+          <div class="absolute -left-10 top-10 h-28 w-28 rounded-full bg-primary/20 blur-3xl" />
+          <div class="absolute -right-10 bottom-8 h-28 w-28 rounded-full bg-accent/25 blur-3xl" />
+
+          <div class="relative mx-auto w-[235px] animate-float sm:w-[270px] lg:w-[292px]">
+            <div class="absolute -left-[5px] top-24 h-14 w-[5px] rounded-l-full bg-slate-800 shadow-sm" />
+            <div class="absolute -left-[5px] top-44 h-9 w-[5px] rounded-l-full bg-slate-800 shadow-sm" />
+            <div class="absolute -right-[5px] top-36 h-20 w-[5px] rounded-r-full bg-slate-800 shadow-sm" />
+            <div class="relative rounded-[2.45rem] bg-gradient-to-br from-slate-950 via-slate-800 to-slate-950 p-[6px] shadow-[0_34px_80px_rgba(15,23,42,0.30)] ring-1 ring-white/30 sm:rounded-[2.85rem]">
+              <div class="relative overflow-hidden rounded-[2.05rem] bg-white shadow-inner sm:rounded-[2.45rem]">
+                <div class="absolute left-1/2 top-3 z-20 h-6 w-[86px] -translate-x-1/2 rounded-full bg-slate-950 shadow-inner sm:h-7 sm:w-[98px]">
+                  <div class="absolute right-4 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-slate-700 ring-1 ring-slate-600" />
+                </div>
+
+                <div class="bg-slate-50 px-0 pb-0 pt-10 sm:pt-12">
+                  <div class="mb-3 flex items-center justify-between px-5 text-[9px] font-bold text-slate-950">
+                    <span>9:41</span>
+                    <div class="flex items-center gap-1 text-slate-800">
+                      <span class="h-1.5 w-3 rounded-sm bg-slate-800" />
+                      <span class="h-2 w-3 rounded-sm border border-slate-800" />
                     </div>
                   </div>
-                  <!-- Chart -->
-                  <div class="mt-3 rounded-lg bg-white p-2 shadow-sm sm:mt-4 sm:rounded-xl sm:p-3">
-                    <div class="mb-1.5 text-[10px] font-medium text-gray-500 sm:mb-2 sm:text-xs">Ventas Semanales</div>
-                    <div class="flex items-end justify-between gap-0.5 sm:gap-1">
-                      <div class="flex flex-1 flex-col items-center gap-0.5 sm:gap-1">
-                        <div class="w-full rounded-t bg-gradient-to-t from-primary to-accent" style="height: 40%"><div class="h-full min-h-[3px] rounded-t" /></div>
+
+                  <div class="min-h-[560px] bg-slate-50 px-4 pb-8 pt-1 sm:min-h-[620px] sm:px-5">
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <p class="text-[10px] font-semibold text-primary">FullPOS</p>
+                        <h3 class="text-[15px] font-extrabold leading-tight text-slate-950">Rendimiento comercial</h3>
+                        <p class="text-[10px] text-slate-500">Resumen general</p>
                       </div>
-                      <div class="flex flex-1 flex-col items-center gap-0.5 sm:gap-1">
-                        <div class="w-full rounded-t bg-gradient-to-t from-primary to-accent" style="height: 65%"><div class="h-full min-h-[3px] rounded-t" /></div>
-                      </div>
-                      <div class="flex flex-1 flex-col items-center gap-0.5 sm:gap-1">
-                        <div class="w-full rounded-t bg-gradient-to-t from-primary to-accent" style="height: 45%"><div class="h-full min-h-[3px] rounded-t" /></div>
-                      </div>
-                      <div class="flex flex-1 flex-col items-center gap-0.5 sm:gap-1">
-                        <div class="w-full rounded-t bg-gradient-to-t from-primary to-accent" style="height: 80%"><div class="h-full min-h-[3px] rounded-t" /></div>
-                      </div>
-                      <div class="flex flex-1 flex-col items-center gap-0.5 sm:gap-1">
-                        <div class="w-full rounded-t bg-gradient-to-t from-primary to-accent" style="height: 55%"><div class="h-full min-h-[3px] rounded-t" /></div>
-                      </div>
-                      <div class="flex flex-1 flex-col items-center gap-0.5 sm:gap-1">
-                        <div class="w-full rounded-t bg-gradient-to-t from-primary to-accent" style="height: 90%"><div class="h-full min-h-[3px] rounded-t" /></div>
-                      </div>
-                      <div class="flex flex-1 flex-col items-center gap-0.5 sm:gap-1">
-                        <div class="w-full rounded-t bg-gradient-to-t from-primary to-accent" style="height: 70%"><div class="h-full min-h-[3px] rounded-t" /></div>
+                      <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
                       </div>
                     </div>
-                    <div class="mt-0.5 flex justify-between sm:mt-1">
-                      <span class="text-[8px] text-gray-400 sm:text-[10px]">L</span>
-                      <span class="text-[8px] text-gray-400 sm:text-[10px]">M</span>
-                      <span class="text-[8px] text-gray-400 sm:text-[10px]">M</span>
-                      <span class="text-[8px] text-gray-400 sm:text-[10px]">J</span>
-                      <span class="text-[8px] text-gray-400 sm:text-[10px]">V</span>
-                      <span class="text-[8px] text-gray-400 sm:text-[10px]">S</span>
-                      <span class="text-[8px] text-gray-400 sm:text-[10px]">D</span>
+
+                    <div class="mt-3 flex gap-1 overflow-hidden rounded-full bg-slate-100 p-1 text-[8px] font-bold text-slate-500">
+                      <span class="rounded-full bg-primary px-2 py-1 text-white">Hoy</span>
+                      <span class="px-2 py-1">Semana</span>
+                      <span class="px-2 py-1">Mes</span>
+                      <span class="px-2 py-1">Año</span>
+                    </div>
+
+                    <div class="mt-4">
+                      <p class="text-[10px] font-medium text-slate-500">Total vendido</p>
+                      <p class="mt-1 text-[22px] font-black leading-none tracking-tight text-slate-950">RD$ 19,087.00</p>
+                      <div class="mt-2 inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2 py-1 text-[9px] font-bold text-primary">
+                        <span class="h-1.5 w-1.5 rounded-full bg-primary" />
+                        Ventas
+                      </div>
+                    </div>
+
+                    <div class="mt-3 grid grid-cols-3 gap-2">
+                      <div class="rounded-xl border border-slate-100 bg-white p-2 shadow-sm">
+                        <p class="text-[8px] text-slate-400">Fecha</p>
+                        <p class="mt-1 text-[12px] font-extrabold text-primary">24/06</p>
+                      </div>
+                      <div class="rounded-xl border border-slate-100 bg-white p-2 shadow-sm">
+                        <p class="text-[8px] text-slate-400">Ordenes</p>
+                        <p class="mt-1 text-[12px] font-extrabold text-slate-950">23</p>
+                      </div>
+                      <div class="rounded-xl border border-emerald-100 bg-emerald-50 p-2 shadow-sm">
+                        <p class="text-[8px] text-emerald-600">Utilidad</p>
+                        <p class="mt-1 text-[11px] font-extrabold text-emerald-700">RD$ 4,301</p>
+                      </div>
+                    </div>
+
+                    <div class="mt-4 rounded-2xl border border-slate-100 bg-slate-50 px-2 py-3">
+                      <svg class="h-[104px] w-full overflow-visible" viewBox="0 0 220 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 86H213" stroke="#E2E8F0" stroke-width="1" />
+                        <path d="M7 62H213" stroke="#E2E8F0" stroke-width="1" />
+                        <path d="M7 38H213" stroke="#E2E8F0" stroke-width="1" />
+                        <path d="M7 14H213" stroke="#E2E8F0" stroke-width="1" />
+                        <path d="M13 70C29 62 38 58 52 63C66 68 73 43 87 48C101 53 108 72 122 66C136 60 143 36 157 40C171 44 177 62 191 54C203 47 208 50 214 52" stroke="#2563EB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M13 70C29 62 38 58 52 63C66 68 73 43 87 48C101 53 108 72 122 66C136 60 143 36 157 40C171 44 177 62 191 54C203 47 208 50 214 52" stroke="#93C5FD" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity=".22" />
+                        <g fill="#2563EB" stroke="white" stroke-width="3">
+                          <circle cx="13" cy="70" r="5" />
+                          <circle cx="52" cy="63" r="5" />
+                          <circle cx="87" cy="48" r="5" />
+                          <circle cx="122" cy="66" r="5" />
+                          <circle cx="157" cy="40" r="5" />
+                          <circle cx="191" cy="54" r="5" />
+                          <circle cx="214" cy="52" r="5" />
+                        </g>
+                        <g>
+                          <rect x="128" y="22" width="48" height="20" rx="8" fill="#0F172A" />
+                          <text x="152" y="35" text-anchor="middle" fill="white" font-size="8" font-weight="700">RD$ 820</text>
+                        </g>
+                      </svg>
+                    </div>
+
+                    <div class="mt-3 grid grid-cols-2 gap-2">
+                      <div class="rounded-xl border border-slate-100 bg-white p-2.5 shadow-sm">
+                        <p class="text-[8px] text-slate-400">Total ventas</p>
+                        <p class="mt-1 text-[12px] font-extrabold text-slate-950">RD$ 19,087</p>
+                        <p class="text-[8px] text-slate-400">Ver mas</p>
+                      </div>
+                      <div class="rounded-xl border border-slate-100 bg-white p-2.5 shadow-sm">
+                        <p class="text-[8px] text-slate-400">Utilidad</p>
+                        <p class="mt-1 text-[12px] font-extrabold text-slate-950">RD$ 4,301</p>
+                        <p class="text-[8px] text-slate-400">22% del total</p>
+                      </div>
+                    </div>
+
+                    <div class="mt-3">
+                      <div class="mb-2 flex items-center justify-between">
+                        <p class="text-[10px] font-extrabold text-slate-950">Productos mas vendidos</p>
+                        <p class="text-[8px] font-bold text-primary">Ver mas</p>
+                      </div>
+                      <div class="flex items-center gap-2 rounded-2xl border border-slate-100 bg-white p-2 shadow-sm">
+                        <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-slate-900 to-amber-400" />
+                        <div class="min-w-0 flex-1">
+                          <p class="truncate text-[9px] font-bold text-slate-950">Taladro inalambrico 20V</p>
+                          <p class="truncate text-[8px] text-slate-500">12 unidades</p>
+                        </div>
+                        <p class="text-[8px] font-black text-emerald-600">RD$ 9,980</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- Home indicator -->
-              <div class="flex items-center justify-center pb-2 sm:pb-3">
-                <div class="h-0.5 w-8 rounded-full bg-gray-300 sm:h-1 sm:w-10" />
+
+                <div class="absolute bottom-2 left-1/2 h-1 w-24 -translate-x-1/2 rounded-full bg-slate-950/75" />
               </div>
             </div>
           </div>
-          <!-- Decorative dots -->
-          <div class="absolute -left-6 top-16 hidden h-3 w-3 rounded-full bg-primary/20 lg:block sm:h-4 sm:w-4" />
-          <div class="absolute -right-3 bottom-8 hidden h-4 w-4 rounded-full bg-accent/20 lg:block sm:h-6 sm:w-6" />
         </div>
       </div>
 
       <!-- Right: Content -->
       <div class="text-center lg:text-left">
         <span class="badge">FullPOS Owner</span>
-        <h2 class="section-title mt-4">Tu Negocio en tu Bolsillo</h2>
-        <p class="section-subtitle mt-4 text-left">
-          Con FullPOS Owner puedes acceder a la información más importante de tu negocio desde cualquier lugar usando tu teléfono. Ventas en tiempo real, inventario, estadísticas y más.
+        <h2 class="section-title mt-4">Tu negocio en la palma de tu mano</h2>
+        <p class="mt-4 text-base leading-relaxed text-gray-500 sm:text-lg">
+          Con <strong class="text-gray-900">FullPOS Owner</strong>, accede a la información más importante de tu negocio desde cualquier lugar. Solo necesitas un celular con conexión a internet para consultar ventas, inventario y estadísticas en tiempo real.
         </p>
 
-        <div class="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 sm:h-8 sm:w-8">
-              <svg class="h-3.5 w-3.5 text-primary sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+        <div class="mt-8 space-y-4 sm:mt-10">
+          <div class="group flex items-start gap-4">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white sm:h-12 sm:w-12">
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
             </div>
-            <span class="text-sm text-gray-700 sm:text-base">Ventas del día en tiempo real</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 sm:h-8 sm:w-8">
-              <svg class="h-3.5 w-3.5 text-primary sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+            <div>
+              <h3 class="text-base font-semibold text-gray-900 sm:text-lg">Reportes de ventas en tiempo real</h3>
+              <p class="mt-1 text-sm text-gray-500">Consulta tus ventas del día, semana o mes al instante.</p>
             </div>
-            <span class="text-sm text-gray-700 sm:text-base">Ganancias y márgenes de beneficio</span>
           </div>
-          <div class="flex items-center gap-3">
-            <div class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 sm:h-8 sm:w-8">
-              <svg class="h-3.5 w-3.5 text-primary sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          <div class="group flex items-start gap-4">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-300 group-hover:bg-accent group-hover:text-white sm:h-12 sm:w-12">
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
             </div>
-            <span class="text-sm text-gray-700 sm:text-base">Informes de inventario y stock bajo</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 sm:h-8 sm:w-8">
-              <svg class="h-3.5 w-3.5 text-primary sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+            <div>
+              <h3 class="text-base font-semibold text-gray-900 sm:text-lg">Inventario completo</h3>
+              <p class="mt-1 text-sm text-gray-500">Revisa el stock de tus productos desde tu celular.</p>
             </div>
-            <span class="text-sm text-gray-700 sm:text-base">Gráficos de ventas por día, semana o mes</span>
           </div>
-          <div class="flex items-center gap-3">
-            <div class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 sm:h-8 sm:w-8">
-              <svg class="h-3.5 w-3.5 text-primary sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          <div class="group flex items-start gap-4">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-green-500/10 text-green-500 transition-all duration-300 group-hover:bg-green-500 group-hover:text-white sm:h-12 sm:w-12">
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             </div>
-            <span class="text-sm text-gray-700 sm:text-base">Productos más vendidos y estadísticas</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 sm:h-8 sm:w-8">
-              <svg class="h-3.5 w-3.5 text-primary sm:h-4 sm:w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+            <div>
+              <h3 class="text-base font-semibold text-gray-900 sm:text-lg">Estadísticas y ganancias</h3>
+              <p class="mt-1 text-sm text-gray-500">Visualiza tus ganancias y el rendimiento de tu negocio.</p>
             </div>
-            <span class="text-sm text-gray-700 sm:text-base">Acceso remoto desde cualquier lugar</span>
           </div>
-        </div>
-
-        <div class="mt-6 sm:mt-8">
-          <a href="#contacto" class="btn-primary px-6 py-3.5 text-sm sm:px-8 sm:py-4 sm:text-base">
-            Solicitar Información
-          </a>
+          <div class="group flex items-start gap-4">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-purple-500/10 text-purple-500 transition-all duration-300 group-hover:bg-purple-500 group-hover:text-white sm:h-12 sm:w-12">
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+            </div>
+            <div>
+              <h3 class="text-base font-semibold text-gray-900 sm:text-lg">Información de cajas</h3>
+              <p class="mt-1 text-sm text-gray-500">Controla aperturas, cierres y movimientos de caja.</p>
+            </div>
+          </div>
+          <div class="group flex items-start gap-4">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-amber-500/10 text-amber-500 transition-all duration-300 group-hover:bg-amber-500 group-hover:text-white sm:h-12 sm:w-12">
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>
+            </div>
+            <div>
+              <h3 class="text-base font-semibold text-gray-900 sm:text-lg">Productos más vendidos</h3>
+              <p class="mt-1 text-sm text-gray-500">Identifica qué productos tienen mayor rotación.</p>
+            </div>
+          </div>
+          <div class="group flex items-start gap-4">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white sm:h-12 sm:w-12">
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <div>
+              <h3 class="text-base font-semibold text-gray-900 sm:text-lg">Acceso desde cualquier lugar</h3>
+              <p class="mt-1 text-sm text-gray-500">Solo necesitas un navegador web en tu celular.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
