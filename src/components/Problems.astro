@@ -1,0 +1,65 @@
+---
+const problems = [
+  {
+    icon: 'search',
+    title: '¿Pierdes el control de tu inventario?',
+    description: 'Saber exactamente qué productos tienes, cuántos hay y cuándo reordenar es difícil sin un sistema. FullPOS te da control total de tu inventario en tiempo real.',
+  },
+  {
+    icon: 'edit',
+    title: '¿Aún haces ventas manuales?',
+    description: 'Las ventas manuales en libretas causan errores, pérdidas de información y falta de control. Con FullPOS procesas ventas rápido y todo queda registrado automáticamente.',
+  },
+  {
+    icon: 'trending-up',
+    title: '¿No sabes cuánto estás ganando?',
+    description: 'Sin informes claros no sabes si tu negocio es rentable. FullPOS genera reportes detallados de ventas, ganancias, gastos y márgenes para que tomes decisiones informadas.',
+  },
+  {
+    icon: 'smartphone',
+    title: '¿Necesitas ver informes desde tu celular?',
+    description: 'Cuando no estás en tu negocio, es difícil saber qué está pasando. Con FullPOS Owner puedes ver ventas, inventario y estadísticas desde tu teléfono donde quiera que estés.',
+  },
+  {
+    icon: 'users',
+    title: '¿Tus empleados cometen errores?',
+    description: 'Los errores humanos en precios, cuentas y registros afectan tus ganancias. FullPOS automatiza los cálculos y elimina los errores manuales.',
+  },
+  {
+    icon: 'wifi-off',
+    title: '¿Tu internet falla y pierdes ventas?',
+    description: 'Cuando el internet se cae, muchos negocios dejan de vender. FullPOS funciona completamente sin internet, tu negocio nunca se detiene.',
+  },
+];
+---
+
+<section id="problemas" class="py-16 sm:py-20 lg:py-28">
+  <div class="container-custom">
+    <div class="text-center">
+      <span class="badge">Problemas que Resolvemos</span>
+      <h2 class="section-title mt-4">¿Tu Negocio Tiene Estos Problemas?</h2>
+      <p class="section-subtitle">
+        Identificamos los desafíos más comunes de los dueños de negocios y creamos FullPOS para resolverlos.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {problems.map((problem) => (
+        <div class="card card-hover group">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-red-50 text-red-500 transition-colors group-hover:bg-red-500 group-hover:text-white">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {problem.icon === 'search' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />}
+              {problem.icon === 'edit' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />}
+              {problem.icon === 'trending-up' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />}
+              {problem.icon === 'smartphone' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />}
+              {problem.icon === 'users' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />}
+              {problem.icon === 'wifi-off' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m-2.829-2.829a5 5 0 000-7.07m-4.243 4.243a1 1 0 010-1.414" />}
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900">{problem.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-500">{problem.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

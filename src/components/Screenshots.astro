@@ -1,0 +1,61 @@
+---
+const screenshots = [
+  { title: 'Configuración de FullPOS', desc: 'Configura tu negocio y personaliza el sistema', file: '01_configuracion_fullpos.png' },
+  { title: 'FullPOS Owner - Nube', desc: 'Accede a tus datos desde la nube', file: '02_nube_fullpos_owner.png' },
+  { title: 'Registrar Compra', desc: 'Gestiona tus compras y proveedores', file: '03_registrar_compra_manual.png' },
+  { title: 'Movimientos de Inventario', desc: 'Controla las entradas y salidas de productos', file: '04_movimientos_inventario.png' },
+  { title: 'Menú Lateral', desc: 'Navega por todas las funciones del sistema', file: '05_menu_lateral_fullpos.png' },
+  { title: 'Menú Lateral - Más Opciones', desc: 'Accede a configuraciones avanzadas', file: '06_menu_lateral_fullpos_2.png' },
+  { title: 'Categorías de Productos', desc: 'Organiza tus productos por categorías', file: '07_categorias_productos.png' },
+  { title: 'Ventas - Catálogo', desc: 'Realiza ventas desde el catálogo de productos', file: '08_ventas_catalogo.png' },
+  { title: 'Factura de Venta', desc: 'Genera facturas profesionales', file: '09_factura_de_venta.png' },
+];
+---
+
+<section id="modulos" class="bg-gray-50 py-16 sm:py-20 lg:py-28">
+  <div class="container-custom">
+    <div class="text-center">
+      <span class="badge">Galería</span>
+      <h2 class="section-title mt-4">Capturas de Pantalla</h2>
+      <p class="section-subtitle">
+        Conoce la interfaz de FullPOS diseñada para la eficiencia y facilidad de uso.
+      </p>
+    </div>
+
+    <div class="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+      {screenshots.map((ss) => (
+        <div class="group relative overflow-hidden rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl sm:rounded-2xl">
+          <div class="p-2 sm:p-3">
+            <div class="overflow-hidden rounded-lg border border-gray-200 sm:rounded-t-lg">
+              <!-- Screen top bar -->
+              <div class="flex items-center gap-1 bg-gray-100 px-2 py-1.5 sm:gap-1.5 sm:px-3 sm:py-2">
+                <div class="h-1.5 w-1.5 rounded-full bg-red-400 sm:h-2 sm:w-2" />
+                <div class="h-1.5 w-1.5 rounded-full bg-yellow-400 sm:h-2 sm:w-2" />
+                <div class="h-1.5 w-1.5 rounded-full bg-green-400 sm:h-2 sm:w-2" />
+                <div class="ml-1.5 text-[8px] text-gray-400 sm:ml-2 sm:text-[10px]">FullPOS</div>
+              </div>
+              <!-- Screen content -->
+              <div class="bg-gray-50">
+                <img
+                  src={`/images/capturas/${ss.file}`}
+                  alt={ss.title}
+                  class="w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Laptop base -->
+          <div class="mx-auto h-0.5 w-3/4 rounded-b bg-gray-300 sm:h-1" />
+          <!-- Overlay on hover -->
+          <div class="absolute inset-0 flex items-center justify-center bg-primary/90 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div class="p-3 text-center text-white sm:p-4">
+              <h3 class="text-sm font-bold sm:text-lg">{ss.title}</h3>
+              <p class="mt-0.5 text-xs text-white/80 sm:mt-1 sm:text-sm">{ss.desc}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

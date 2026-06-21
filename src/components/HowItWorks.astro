@@ -1,0 +1,86 @@
+---
+const steps = [
+  {
+    number: '1',
+    title: 'Descarga la Demo',
+    description: 'Descarga FullPOS completamente gratis. La demo incluye todas las funciones del sistema sin limitaciones.',
+    icon: 'download',
+  },
+  {
+    number: '2',
+    title: 'Instala FullPOS',
+    description: 'Instala el programa en tu computadora con Windows. El proceso es rápido y sencillo, solo sigue los pasos.',
+    icon: 'monitor',
+  },
+  {
+    number: '3',
+    title: 'Usa el Sistema 5 Días',
+    description: 'Prueba FullPOS sin compromiso durante 5 días. Configura tu negocio, crea productos y procesa ventas reales.',
+    icon: 'calendar',
+  },
+  {
+    number: '4',
+    title: 'Compra tu Licencia',
+    description: 'Si FullPOS es lo que necesitas, adquiere tu licencia desde $20 USD al mes. Mínimo 3 meses. Puedes comprar 3, 6, 9, 12 meses o más.',
+    icon: 'credit-card',
+  },
+  {
+    number: '5',
+    title: 'Activa y Vende',
+    description: 'Activa tu licencia y continúa usando FullPOS sin interrupciones. Todos tus datos de la demo se conservan.',
+    icon: 'check-circle',
+  },
+];
+---
+
+<section id="como-funciona" class="py-16 sm:py-20 lg:py-28">
+  <div class="container-custom">
+    <div class="text-center">
+      <span class="badge">Cómo Funciona</span>
+      <h2 class="section-title mt-4">Comienza en 5 Pasos</h2>
+      <p class="section-subtitle">
+        Empezar con FullPOS es más fácil de lo que imaginas. En pocos minutos tendrás tu sistema funcionando.
+      </p>
+    </div>
+
+    <div class="relative mt-12 sm:mt-16">
+      <!-- Timeline line (desktop only) -->
+      <div class="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-gray-200 lg:block" />
+
+      <div class="space-y-6 sm:space-y-8 lg:space-y-0">
+        {steps.map((step, index) => (
+          <div class={`relative flex flex-col gap-4 lg:flex-row ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'}`}>
+            <!-- Timeline dot (desktop) -->
+            <div class="absolute left-1/2 top-8 z-10 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-primary bg-white lg:block" />
+
+            <!-- Mobile timeline line -->
+            <div class="absolute left-6 top-0 h-full w-0.5 bg-gray-200 lg:hidden" />
+
+            <!-- Content -->
+            <div class="flex-1 lg:px-12">
+              <div class="relative rounded-2xl bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-8 lg:text-left">
+                <div class="flex items-start gap-4">
+                  <!-- Mobile step number -->
+                  <div class="relative z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-primary text-white text-sm font-bold lg:hidden">
+                    {step.number}
+                  </div>
+                  <!-- Desktop step number -->
+                  <div class={`hidden lg:flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-primary text-white text-xl font-bold ${index % 2 === 0 ? '' : 'lg:order-1'}`}>
+                    {step.number}
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-base font-bold text-gray-900 sm:text-xl">{step.title}</h3>
+                    <p class="mt-1.5 text-sm leading-relaxed text-gray-500 sm:mt-2 sm:text-base">{step.description}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Spacer for alternating layout (desktop) -->
+            <div class="hidden flex-1 lg:block" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

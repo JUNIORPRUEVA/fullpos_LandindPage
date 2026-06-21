@@ -1,0 +1,123 @@
+---
+const benefits = [
+  {
+    title: 'Gestión de Ventas',
+    desc: 'Realiza ventas de forma rápida e intuitiva. Soporta múltiples formas de pago, descuentos y facturación electrónica.',
+    icon: 'cart',
+  },
+  {
+    title: 'Control de Inventario',
+    desc: 'Lleva el control exacto de tu inventario con movimientos automatizados, alertas de stock bajo y ajustes manuales.',
+    icon: 'inventory',
+  },
+  {
+    title: 'Cotizaciones y Presupuestos',
+    desc: 'Crea cotizaciones profesionales para tus clientes y conviértelas en ventas con un solo clic.',
+    icon: 'document',
+  },
+  {
+    title: 'Gestión de Compras',
+    desc: 'Administra tus compras a proveedores, controla órdenes de compra y lleva un historial completo.',
+    icon: 'purchase',
+  },
+  {
+    title: 'Control de Gastos',
+    desc: 'Registra y categoriza todos los gastos de tu negocio para tener una visión clara de tus finanzas.',
+    icon: 'expense',
+  },
+  {
+    title: 'Gestión de Clientes',
+    desc: 'Mantén un registro completo de tus clientes con historial de compras, créditos y datos de contacto.',
+    icon: 'users',
+  },
+  {
+    title: 'Reportes de Negocio',
+    desc: 'Obtén reportes detallados de ventas, ganancias, productos más vendidos y rendimiento del negocio.',
+    icon: 'chart',
+  },
+  {
+    title: 'Múltiples Usuarios',
+    desc: 'Crea usuarios con diferentes permisos y roles para que tu equipo pueda usar el sistema de forma segura.',
+    icon: 'team',
+  },
+  {
+    title: 'Códigos de Barras',
+    desc: 'Compatible con lectores de código de barras USB. Busca productos al instante durante las ventas.',
+    icon: 'barcode',
+  },
+  {
+    title: 'Impresora Térmica',
+    desc: 'Imprime tickets de venta y facturas en impresoras térmicas ESC/POS y matriciales.',
+    icon: 'printer',
+  },
+  {
+    title: 'Control de Caja',
+    desc: 'Administra el efectivo de tu negocio con apertura y cierre de caja, control de ingresos y egresos.',
+    icon: 'cash',
+  },
+  {
+    title: 'Tecnología Offline',
+    desc: 'Todo el sistema funciona sin internet. Tus datos están seguros en tu computadora, sin depender de la nube.',
+    icon: 'offline',
+  },
+];
+---
+
+<section id="beneficios" class="py-16 sm:py-20 lg:py-28">
+  <div class="container-custom">
+    <div class="text-center">
+      <span class="badge">Características</span>
+      <h2 class="section-title mt-4">Todo lo que tu Negocio Necesita</h2>
+      <p class="section-subtitle">
+        FullPOS incluye todas las herramientas que necesitas para administrar tu negocio de manera eficiente.
+      </p>
+    </div>
+
+    <div class="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8">
+      {benefits.map((b) => (
+        <div class="card card-hover group">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white sm:h-12 sm:w-12">
+            {b.icon === 'cart' && (
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" /></svg>
+            )}
+            {b.icon === 'inventory' && (
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+            )}
+            {b.icon === 'document' && (
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            )}
+            {b.icon === 'purchase' && (
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+            )}
+            {b.icon === 'expense' && (
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            )}
+            {b.icon === 'users' && (
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+            )}
+            {b.icon === 'chart' && (
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+            )}
+            {b.icon === 'team' && (
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+            )}
+            {b.icon === 'barcode' && (
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+            )}
+            {b.icon === 'printer' && (
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
+            )}
+            {b.icon === 'cash' && (
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+            )}
+            {b.icon === 'offline' && (
+              <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m-2.829-2.829a5 5 0 000-7.07m-4.243 4.243a1 1 0 010-1.414" /></svg>
+            )}
+          </div>
+          <h3 class="mt-3 text-base font-bold text-gray-900 sm:mt-4 sm:text-lg">{b.title}</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-gray-500 sm:mt-2">{b.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
