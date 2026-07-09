@@ -11,11 +11,11 @@
 
     <!-- Desktop Menu -->
     <div class="hidden items-center gap-1 lg:flex">
-      <a href="#beneficios" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white">Beneficios</a>
-      <a href="#modulos" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white">Módulos</a>
-      <a href="#precios" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white">Precios</a>
-      <a href="#faq" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white">FAQ</a>
-      <a href="#contacto" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white">Contacto</a>
+      <a href="/" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white">Inicio</a>
+      <a href="/#beneficios" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white">Beneficios</a>
+      <a href="/#funciones" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white">Funciones</a>
+      <a href="/contact" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white">Contacto</a>
+      <a href="/support" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white">Soporte</a>
     </div>
 
     <!-- Desktop Right -->
@@ -46,11 +46,11 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-6 pt-4">
     <div class="space-y-1">
-      <a href="#beneficios" class="mobile-link block rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Beneficios</a>
-      <a href="#modulos" class="mobile-link block rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Módulos</a>
-      <a href="#precios" class="mobile-link block rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Precios</a>
-      <a href="#faq" class="mobile-link block rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white">FAQ</a>
-      <a href="#contacto" class="mobile-link block rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Contacto</a>
+      <a href="/" class="mobile-link block rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Inicio</a>
+      <a href="/#beneficios" class="mobile-link block rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Beneficios</a>
+      <a href="/#funciones" class="mobile-link block rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Funciones</a>
+      <a href="/contact" class="mobile-link block rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Contacto</a>
+      <a href="/support" class="mobile-link block rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Soporte</a>
     </div>
     <div class="mt-4 space-y-3">
       <button class="download-btn flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark" data-original-text="Descargar Demo">
@@ -107,13 +107,16 @@
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
+  const normalizeHref = (href) => href?.replace(/^\//, '');
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         navLinks.forEach(link => {
           link.classList.remove('text-primary-light', 'bg-white/10');
           link.classList.add('text-slate-300');
-          if (link.getAttribute('href') === `#${entry.target.id}`) {
+          const href = normalizeHref(link.getAttribute('href'));
+          if (href === `#${entry.target.id}`) {
             link.classList.remove('text-slate-300');
             link.classList.add('text-primary-light', 'bg-white/10');
           }

@@ -2,8 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
+import BusinessTypes from '../components/BusinessTypes.astro';
 import Benefits from '../components/Benefits.astro';
 import WhyFullpos from '../components/WhyFullpos.astro';
+import CompanyInfo from '../components/CompanyInfo.astro';
 import MobileReports from '../components/MobileReports.astro';
 import Screenshots from '../components/Screenshots.astro';
 import HowItWorks from '../components/HowItWorks.astro';
@@ -12,15 +14,16 @@ import Testimonials from '../components/Testimonials.astro';
 import FAQ from '../components/FAQ.astro';
 import FinalCTA from '../components/FinalCTA.astro';
 import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
 ---
 
-<Layout>
+<Layout title="FullPOS - Sistema de Punto de Venta para negocios" description="FullPOS es un sistema de punto de venta para controlar ventas, inventario, caja, clientes y reportes. Desarrollado por FullTech SRL / APYRA en República Dominicana.">
   <Navbar />
   <main>
     <Hero />
+    <BusinessTypes />
     <Benefits />
     <WhyFullpos />
+    <CompanyInfo />
     <MobileReports />
     <Screenshots />
     <HowItWorks />
@@ -30,5 +33,4 @@ import Footer from '../components/Footer.astro';
     <FinalCTA />
     <Contact />
   </main>
-  <Footer />
 </Layout>
