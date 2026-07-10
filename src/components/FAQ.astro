@@ -33,6 +33,19 @@ const faqs = [
     a: 'Las licencias de FullPOS se adquieren por tiempo (mínimo 3 meses). Al comprar tu licencia, recibes un código de activación que ingresas en el sistema. Cuando la licencia vence, simplemente la renuevas y continúas trabajando.',
   },
 ];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faqs.map((faq) => ({
+    '@type': 'Question',
+    'name': faq.q,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': faq.a,
+    },
+  })),
+};
 ---
 
 <section id="faq" class="bg-white py-16 sm:py-20 lg:py-28">
@@ -62,3 +75,7 @@ const faqs = [
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+  {JSON.stringify(faqJsonLd)}
+</script>

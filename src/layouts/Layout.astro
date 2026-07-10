@@ -6,9 +6,104 @@ export interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  canonicalPath?: string;
+  keywords?: string;
 }
 
-const { title = 'FullPOS - Sistema de Punto de Venta para negocios', description = 'FullPOS es un sistema de punto de venta para controlar ventas, inventario, caja, clientes y reportes. Desarrollado por FullTech SRL / APYRA en República Dominicana.', ogImage = '/images/og-image.png' } = Astro.props;
+const SITE_URL = 'https://fullpos.fulltechrd.com';
+const defaultTitle = 'FullPOS Punto de Venta | Sistema POS para ventas, inventario y caja';
+const defaultDescription = 'FullPOS es un sistema de punto de venta para negocios en República Dominicana. Controla ventas, inventario, caja, clientes, facturación y reportes desde Windows, con FullPOS Owner para ver datos desde el celular.';
+const defaultKeywords = 'FullPOS, FullPOS punto de venta, FullPOS_Punto de ventas, punto de venta, punto de ventas, sistema POS, software POS, sistema de ventas, sistema para tienda, sistema para minimarket, sistema para ferretería, control de inventario, facturación, caja, reportes, FullPOS Owner, POS República Dominicana';
+const {
+  title = defaultTitle,
+  description = defaultDescription,
+  ogImage = '/images/hero-fullpos-devices.png',
+  canonicalPath,
+  keywords = defaultKeywords,
+} = Astro.props;
+const canonicalUrl = new URL(canonicalPath || Astro.url.pathname, SITE_URL).toString();
+const ogImageUrl = new URL(ogImage, SITE_URL).toString();
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
+      'name': 'FullTech SRL / APYRA',
+      'url': SITE_URL,
+      'logo': `${SITE_URL}/logo.png`,
+      'telephone': '+1-849-429-0310',
+      'areaServed': 'República Dominicana',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Higüey',
+        'addressRegion': 'La Altagracia',
+        'addressCountry': 'DO',
+      },
+      'contactPoint': [
+        {
+          '@type': 'ContactPoint',
+          'telephone': '+1-849-429-0310',
+          'contactType': 'sales and customer support',
+          'areaServed': 'DO',
+          'availableLanguage': 'Spanish',
+          'url': 'https://wa.me/18494290310',
+        },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      'url': SITE_URL,
+      'name': 'FullPOS Punto de Venta',
+      'alternateName': ['FullPOS', 'FullPOS_Punto de ventas', 'Sistema POS FullPOS'],
+      'publisher': { '@id': `${SITE_URL}/#organization` },
+      'inLanguage': 'es-DO',
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': `${SITE_URL}/#software`,
+      'name': 'FullPOS',
+      'alternateName': ['FullPOS Punto de Venta', 'FullPOS_Punto de ventas', 'Sistema POS FullPOS'],
+      'applicationCategory': 'BusinessApplication',
+      'applicationSubCategory': 'Point of Sale Software',
+      'operatingSystem': 'Windows',
+      'description': defaultDescription,
+      'url': SITE_URL,
+      'image': ogImageUrl,
+      'publisher': { '@id': `${SITE_URL}/#organization` },
+      'offers': {
+        '@type': 'Offer',
+        'price': '60',
+        'priceCurrency': 'USD',
+        'availability': 'https://schema.org/InStock',
+        'description': 'Licencia mínima de 3 meses para FullPOS, con FullPOS Owner, soporte y actualizaciones.',
+      },
+      'featureList': [
+        'Ventas y facturación',
+        'Control de inventario',
+        'Caja y cierres',
+        'Clientes y compras',
+        'Reportes del negocio',
+        'FullPOS Owner para reportes desde el celular',
+      ],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonicalUrl}#webpage`,
+      'url': canonicalUrl,
+      'name': title,
+      'description': description,
+      'isPartOf': { '@id': `${SITE_URL}/#website` },
+      'about': { '@id': `${SITE_URL}/#software` },
+      'inLanguage': 'es-DO',
+      'primaryImageOfPage': {
+        '@type': 'ImageObject',
+        'url': ogImageUrl,
+      },
+    },
+  ],
+};
 ---
 
 <!DOCTYPE html>
@@ -18,15 +113,17 @@ const { title = 'FullPOS - Sistema de Punto de Venta para negocios', description
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://fullpos.fulltechrd.com/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:url" content="https://fullpos.fulltechrd.com/" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content="FullPOS punto de venta para ventas, inventario, caja y reportes" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="FullPOS" />
     <meta property="og:locale" content="es_DO" />
 
@@ -34,7 +131,7 @@ const { title = 'FullPOS - Sistema de Punto de Venta para negocios', description
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image" content={ogImageUrl} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,38 +144,14 @@ const { title = 'FullPOS - Sistema de Punto de Venta para negocios', description
 
     <!-- Theme Color -->
     <meta name="theme-color" content="#2563eb" />
-    <meta name="keywords" content="FullPOS, sistema de punto de venta, POS República Dominicana, software de ventas, control de inventario, sistema para tienda, facturación, caja, reportes" />
+    <meta name="application-name" content="FullPOS Punto de Venta" />
+    <meta name="keywords" content={keywords} />
     <meta name="author" content="FullTech SRL / APYRA" />
     <meta name="geo.region" content="DO" />
+    <meta name="geo.placename" content="Higüey, La Altagracia, República Dominicana" />
 
     <script type="application/ld+json">
-      {JSON.stringify({
-        '@context': 'https://schema.org',
-        '@graph': [
-          {
-            '@type': 'Organization',
-            'name': 'FullTech SRL / APYRA',
-            'url': 'https://fullpos.fulltechrd.com/',
-            'contactPoint': [
-              {
-                '@type': 'ContactPoint',
-                'telephone': '+1-849-431-4070',
-                'contactType': 'customer support',
-                'areaServed': 'DO',
-                'availableLanguage': 'Spanish'
-              }
-            ]
-          },
-          {
-            '@type': 'SoftwareApplication',
-            'name': 'FullPOS',
-            'applicationCategory': 'BusinessApplication',
-            'operatingSystem': 'Windows',
-            'description': 'Sistema de punto de venta para controlar ventas, inventario, caja, clientes y reportes.',
-            'url': 'https://fullpos.fulltechrd.com/'
-          }
-        ]
-      })}
+      {JSON.stringify(jsonLd)}
     </script>
   </head>
   <body>
@@ -86,7 +159,7 @@ const { title = 'FullPOS - Sistema de Punto de Venta para negocios', description
 
     <!-- WhatsApp Floating Button -->
     <a
-      href="https://wa.me/18494314070"
+      href="https://wa.me/18494290310"
       target="_blank"
       rel="noopener noreferrer"
       class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all duration-300 hover:bg-green-600 hover:scale-110 hover:shadow-xl"

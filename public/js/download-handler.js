@@ -8,7 +8,7 @@
     "https://github.com/JUNIORPRUEVA/fullpos-releases/releases/latest/download/FullPOS-Setup.exe";
 
   var WHATSAPP_FALLBACK =
-    "https://wa.me/18494314070?text=Hola,%20quiero%20descargar%20la%20demo%20de%20FullPOS";
+    "https://wa.me/18494290310?text=Hola,%20quiero%20descargar%20la%20demo%20de%20FullPOS";
 
   function startDownload(url) {
     window.location.assign(url);
