@@ -150,9 +150,7 @@ const jsonLd = {
     <meta name="geo.region" content="DO" />
     <meta name="geo.placename" content="Higüey, La Altagracia, República Dominicana" />
 
-    <script type="application/ld+json">
-      {JSON.stringify(jsonLd)}
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <slot />
